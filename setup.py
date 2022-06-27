@@ -6,7 +6,7 @@ from setuptools import find_packages, setup  # type: ignore
 
 extras_require = {
     "test": [  # `test` GitHub Action jobs uses this
-        "pytest>=6.0,<7.0",  # Core testing package
+        "pytest>=6.0,<=7.0",  # Core testing package
         "pytest-xdist",  # multi-process runner
         "pytest-cov",  # Coverage analyzer plugin
         "hypothesis>=6.2.0,<7.0",  # Strategy-based fuzzer
@@ -67,7 +67,7 @@ setup(
     url="https://github.com/ApeWorX/ape-ganache",
     include_package_data=True,
     install_requires=[
-        "eth-ape>=0.2.1,<0.3.0",
+        "eth-ape>=0.2.1,<=0.3.0",
         "importlib-metadata ; python_version<'3.8'",
     ],  # NOTE: Add 3rd party libraries here
     python_requires=">=3.7.2,<4",
